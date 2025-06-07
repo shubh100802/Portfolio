@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shubham Raj Sharma - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<style>
+    #splash {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #141e30;
+        color: #00ffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        font-weight: bold;
+        z-index: 99999;
+        animation: fadeOut 1s ease 2s forwards;
+    }
+
+    @keyframes fadeOut {
+        to {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    #particles-js {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -10;
+    }
+
+    #toggle-theme {
+        background: none;
+        border: none;
+        color: #00ffff;
+        font-size: 1.5rem;
+        cursor: pointer;
+        margin-left: 10rem;
+    }
+
+    body.dark {
+        background: #0a0a0a;
+        color: #eee;
+    }
+
+    .dark .section-title {
+        color: #00ffff;
+    }
+</style>
+
+
+<!-- ============ Particle Background ============ -->
+
+<div id="particles-js"></div>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+    particlesJS("particles-js", {
+        particles: {
+            number: { value: 45 },
+            color: { value: "#00ffff" },
+            shape: {
+                type: ["circle", "triangle", "star", "edge", "polygon"],
+                stroke: { width: 0, color: "#000" }
+            },
+            opacity: { value: 0.4 },
+            size: { value: 4, random: true },
+            line_linked: {
+                enable: true,
+                distance: 120,
+                color: "#00ffff",
+                opacity: 0.25,
+                width: 1
+            },
+            move: {
+                enable: true,
+                speed: 2,
+                out_mode: "out"
+            }
+        },
+        interactivity: {
+            detect_on: "canvas",
+            events: {
+                onhover: { enable: true, mode: "grab" },
+                onclick: { enable: true, mode: "push" }
+            },
+            modes: {
+                grab: { distance: 140, line_linked: { opacity: 0.5 } },
+                push: { particles_nb: 4 }
+            }
+        },
+        retina_detect: true
+    });
+</script>
+
+
+<!-- ============ AOS (Scroll Animation Library) ============ -->
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 1000, once: true });
+</script>
+
+
+<body>
+    <!-- ============ Back to Top Button ============ -->
+
+    <a href="#" class="back-to-top" title="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+
+    <!-- ============ Navigation Bar ============ -->
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">💼 Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <button id="toggle-theme">🌙</button>
+            </ul>
+            <div class="hamburger">&#9776;</div>
+        </div>
+    </nav>
+
+
+    <!-- ============ Hero / Header Section ============ -->
+
+    <header class="hero">
+        <h1>🚀 Shubham Raj Sharma</h1>
+        <p id="typing-text"><span id="typed-role"></span><span class="cursor">|</span></p>
+    </header>
+
+    <div id="splash">
+        <div class="splash-text">Radhe Radhe 🙏 - Welcome to My Portfolio 🚀 </div>
+    </div>
+
+
+    <main>
+        <!-- ============ About Section ============ -->
+
+        <section id="about">
+            <div class="about-container">
+                <div class="about-card">
+                    <div class="about-image">
+                        <img src="assets/images/WhatsApp Image 2025-05-29 at 15.49.23_9f1b84c8.jpg"
+                            alt="Shubham Raj Sharma" />
+                    </div>
+                    <div class="about-content">
+                        <h2>👋 Hey, I'm Shubham</h2>
+                        <p>
+                            I'm a passionate <strong>Full Stack Developer</strong> and <strong>Cybersecurity
+                                student</strong> currently in my final year of Computer Science. My journey blends
+                            building full-stack web apps, securing digital systems, and exploring backend technologies
+                            with Java.
+                        </p>
+                        <p>
+                            I'm also an enthusiastic <strong>Problem Solver</strong> who loves taking on real-world
+                            challenges with elegant, scalable code. When I’m not coding, I enjoy sharpening my creative
+                            side through <strong>image/video editing</strong>.
+                        </p>
+                        <p>
+                            With a strong foundation in Java, JavaScript, and modern web frameworks, I constantly seek
+                            to learn, create, and contribute to impactful projects.
+                        </p>
+                        <div class="roles-tags">
+                            <span>Full Stack Developer</span>
+                            <span>Java Developer</span>
+                            <span>Cybersecurity</span>
+                            <span>Problem Solver</span>
+                            <span>Video Editor</span>
+                        </div>
+                        <a href="assets/Shubham_Raj_Sharma_Resume.pdf" class="resume-download-btn" target="_blank"
+                            download>
+                            <i class="fas fa-download"></i> Download Resume
+                        </a>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+
+        <!-- ============ Projects Section ============ -->
+
+        <section id="projects" data-aos="fade-up">
+            <h2 class="section-title">🧩 Projects</h2>
+            <div class="projects-grid">
+                <!-- Project Card 1 -->
+                <div class="project-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h3>Student Marks Management System</h3>
+                            <p>Manage and analyze student marks efficiently.</p>
+                        </div>
+                        <div class="card-back">
+                            <p><strong>Technologies:</strong> HTML,CSS, JS, NodeJS, MongoDB</p>
+                            <a href="https://github.com/shubh100802/Student_Marks.git" target="_blank">GitHub</a>
+                            <a href="https://student-marks-b29u.onrender.com/index.html" target="_blank">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h3>Portfolio Website</h3>
+                            <p>Personal portfolio showcasing projects and skills.</p>
+                        </div>
+                        <div class="card-back">
+                            <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+                            <a href="https://github.com/shubh100802/CODSOFT-Task1-PORTFOLIO.git"
+                                target="_blank">GitHub</a>
+                            <a href="https://shubh100802.github.io/CODSOFT-Task1-PORTFOLIO/" target="_blank">Live
+                                Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h3>Physics Centre</h3>
+                            <p>To provide all the study materials to the students and for showing achievements.</p>
+                        </div>
+                        <div class="card-back">
+                            <p><strong>Technologies:</strong> HTML,CSS,JS, BootStrap, Google Drive</p>
+                            <a href="https://github.com/shubh100802/physicscentre.in-new.git" target="_blank">GitHub</a>
+                            <a href="https://shubh100802.github.io/physicscentre.in-new/" target="_blank">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- more project cards -->
+            </div>
+        </section>
+
+
+        <!-- ============ Skills Section ============ -->
+
+        <section id="skills" data-aos="fade-up">
+            <h2 class="section-title">💡 Skills</h2>
+            <div class="skills-container">
+                <div class="skill-card">HTML5</div>
+                <div class="skill-card">CSS3</div>
+                <div class="skill-card">JavaScript</div>
+                <div class="skill-card">Java</div>
+                <div class="skill-card">Node.js</div>
+                <div class="skill-card">MongoDB</div>
+                <div class="skill-card">MySQL</div>
+                <div class="skill-card">Git & GitHub</div>
+                <div class="skill-card">Cybersecurity Fundamentals</div>
+                <div class="skill-card">Video Editing</div>
+                <div class="skill-card">Image Editing</div>
+                <div class="skill-card">Problem Solving</div>
+                <div class="skill-card">C++ (Basics)</div>
+                <div class="skill-card">DSA (Java)</div>
+            </div>
+        </section>
+
+
+        <!-- ============ Contact Section ============ -->
+
+        <section id="contact" data-aos="fade-up">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-links">
+                <a href="https://github.com/shubh100802" target="_blank" class="contact-icon github"
+                    data-tooltip="GitHub">
+                    <i class="fab fa-github"></i>
+
+                </a>
+                <a href="https://www.linkedin.com/in/YOUR_LINKEDIN" target="_blank" class="contact-icon linkedin"
+                    data-tooltip="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+
+                </a>
+                <a href="https://www.instagram.com/itsmeshubh2026?igsh=MW51dXh1ZHc4bjY5Ng==" target="_blank"
+                    class="contact-icon instagram" data-tooltip="Instagram">
+                    <i class="fab fa-instagram"></i>
+
+                </a>
+                <a href="mailto:shubhamraj1414@gmail.com" class="contact-icon gmail" data-tooltip="Gmail">
+                    <i class="fas fa-envelope"></i>
+
+                </a>
+            </div>
+
+        </section>
+
+
+        <!-- ============ Hobbies Section ============ -->
+
+        <section id="hobbies" data-aos="fade-up">
+            <h2 class="section-title">🎯 Hobbies</h2>
+            <div class="hobbies-container">
+                <div class="hobby-card">🔐 Cybersecurity Research</div>
+                <div class="hobby-card">🎬 Video Editing</div>
+                <div class="hobby-card">🖼️ Image Editing</div>
+                <div class="hobby-card">💻 Building Side Projects</div>
+                <div class="hobby-card">📚 Exploring New Tech</div>
+                <div class="hobby-card">🧩 Problem Solving</div>
+                <div class="hobby-card">📷 Tech Content Creation</div>
+                <div class="hobby-card">🕹️ Playing Tech-based Games</div>
+                <div class="hobby-card">🏏 Playing Cricket</div>
+                <div class="hobby-card">🎧 Listening to Music</div>
+                <div class="hobby-card">📖 Reading Religious Books</div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
