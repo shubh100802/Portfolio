@@ -30,15 +30,24 @@ I’m a final-year Computer Science student passionate about **Full Stack Develo
 
 ├── css/
 
-│ └── style.css
+│ 
+└── style.css
+
 ├── js/
 
-│ └── script.js
+│ 
+└── script.js
+
 ├── assets/
 
-│ ├── images/
-│ │ └── profile.jpg
-│ └── Shubham_Raj_Sharma_Resume.pdf
+│ 
+├── images/
+│ 
+│ 
+└── profile.jpg
+│ 
+└── Shubham_Raj_Sharma_Resume.pdf
+
 └── README.md
 
 
