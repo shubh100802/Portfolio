@@ -1,9 +1,9 @@
-# 🚀 Shubham Raj Sharma – 3D Developer Portfolio
+# 🚀 Shubham Raj Sharma – Portfolio
 
 Welcome to my interactive **3D Portfolio Website**!  
 I’m a final-year Computer Science student passionate about **Full Stack Development**, **Cybersecurity**, and **Software Engineering**.
 
-🌐 Live Site: [View Portfolio](https://shubh100802.github.io/3d-portfolio/)
+🌐 Live Site: [View Portfolio](http://shubh100802.github.io/Portfolio/)
 
 ---
 
