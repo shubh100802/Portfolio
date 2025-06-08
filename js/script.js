@@ -63,7 +63,7 @@ document.getElementById("toggle-theme").addEventListener("click", () => {
 });
 
 
-// ============ Gmail ============ //
+// ============ message ============ //
 
 document.getElementById("contact-form").addEventListener("submit", function (e) {
   e.preventDefault();

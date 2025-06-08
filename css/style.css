@@ -669,13 +669,9 @@ body {
 
 /* ============ Footer ============ */
 .footer {
-  /* padding: 2rem 1rem;
-  /* background: rgba(255, 255, 255, 0.03); */
   border-top: 1px solid rgba(255, 255, 255, 0.1); 
-  /* text-align: center; */
   color: #00ffff;
   backdrop-filter: blur(8px);
-  /* box-shadow: 0 -2px 30px rgba(0, 255, 255, 0.1); */
   margin-top: 2rem;
 }
 
@@ -753,6 +749,7 @@ html {
 
 
 /* ============ Light Mode Styling ============ */
+
 body:not(.dark) {
   background: radial-gradient(circle at top left, #e0f7fa, #f5f7fa);
   color: #111;
@@ -780,14 +777,20 @@ body:not(.dark) .section-title,
 body:not(.dark) .resume-download-btn {
   color: #0077b6;
 }
+
 body:not(.dark) .about-content,
 body:not(.dark) #typed-role {
   color: #0077b6;
 }
 
+body:not(.dark) .about-content h2{
+  color: #000;
+}
+
 body:not(.dark) .roles-tags span{
 color: #000;
 }
+
 body:not(.dark) .resume-download-btn {
   border: 1px solid #0077b6;
 }
@@ -836,6 +839,8 @@ body:not(.dark) .section-title {
 
 body:not(.dark) .contact-icon i,
 body:not(.dark) .footer-icon,
-body:not(.dark) .footer-text  {
+body:not(.dark) .footer-text,
+body:not(.dark) .footer  {
   color: #0077b6;
+  border-top: 1px solid rgba(255, 255, 255, 0.1); 
 }
