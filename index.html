@@ -65,48 +65,67 @@
 </style>
 
 
+<!-- Mail -->
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+    (function () {
+        emailjs.init("8Zt_HwskUUnFVR2MY");
+    })();
+</script>
+
+
+
 <!-- ============ Particle Background ============ -->
 
 <div id="particles-js"></div>
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 <script>
-    particlesJS("particles-js", {
-        particles: {
-            number: { value: 45 },
-            color: { value: "#00ffff" },
-            shape: {
-                type: ["circle", "triangle", "star", "edge", "polygon"],
-                stroke: { width: 0, color: "#000" }
+    function loadParticles(color = "#00ffff", linkColor = "#00ffff") {
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 45 },
+                color: { value: color },
+                shape: {
+                    type: ["circle", "triangle", "star", "edge", "polygon"],
+                    stroke: { width: 0, color: "#000" }
+                },
+                opacity: { value: 0.4 },
+                size: { value: 4, random: true },
+                line_linked: {
+                    enable: true,
+                    distance: 120,
+                    color: linkColor,
+                    opacity: 0.25,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    out_mode: "out"
+                }
             },
-            opacity: { value: 0.4 },
-            size: { value: 4, random: true },
-            line_linked: {
-                enable: true,
-                distance: 120,
-                color: "#00ffff",
-                opacity: 0.25,
-                width: 1
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: true, mode: "grab" },
+                    onclick: { enable: true, mode: "push" }
+                },
+                modes: {
+                    grab: { distance: 140, line_linked: { opacity: 0.5 } },
+                    push: { particles_nb: 4 }
+                }
             },
-            move: {
-                enable: true,
-                speed: 2,
-                out_mode: "out"
-            }
-        },
-        interactivity: {
-            detect_on: "canvas",
-            events: {
-                onhover: { enable: true, mode: "grab" },
-                onclick: { enable: true, mode: "push" }
-            },
-            modes: {
-                grab: { distance: 140, line_linked: { opacity: 0.5 } },
-                push: { particles_nb: 4 }
-            }
-        },
-        retina_detect: true
-    });
+            retina_detect: true
+        });
+    }
 </script>
+
+<script>
+    const prefersDark = document.body.classList.contains("dark");
+    loadParticles(prefersDark ? "#00ffff" : "#0077b6", prefersDark ? "#00ffff" : "#0077b6");
+</script>
+
 
 
 <!-- ============ AOS (Scroll Animation Library) ============ -->
@@ -129,7 +148,7 @@
 
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">💼 Portfolio</div>
+            <div class="logo">Portfolio</div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -168,19 +187,20 @@
                     <div class="about-content">
                         <h2>👋 Hey, I'm Shubham</h2>
                         <p>
-                            I'm a passionate <strong>Full Stack Developer</strong> and <strong>Cybersecurity
-                                student</strong> currently in my final year of Computer Science. My journey blends
-                            building full-stack web apps, securing digital systems, and exploring backend technologies
-                            with Java.
+                            I'm a passionate <strong>Full Stack Developer</strong> and a <strong>Computer Science
+                                student</strong> currently in my final year, with growing interest in
+                            <strong>Cybersecurity fundamentals</strong>. I specialize in building full-stack web
+                            applications using <strong>JavaScript</strong>, <strong>Node.js</strong>, and
+                            <strong>MongoDB</strong>, with a solid understanding of modern web development practices.
                         </p>
                         <p>
-                            I'm also an enthusiastic <strong>Problem Solver</strong> who loves taking on real-world
-                            challenges with elegant, scalable code. When I’m not coding, I enjoy sharpening my creative
-                            side through <strong>image/video editing</strong>.
+                            I'm also well-versed in <strong>Java</strong> and actively learning <strong>Data Structures
+                                and Algorithms</strong> to enhance my problem-solving abilities.
                         </p>
                         <p>
-                            With a strong foundation in Java, JavaScript, and modern web frameworks, I constantly seek
-                            to learn, create, and contribute to impactful projects.
+                            When I'm not coding, I love and enjoy sharpening my creative side through <strong>image and
+                                video
+                                editing</strong>.
                         </p>
                         <div class="roles-tags">
                             <span>Full Stack Developer</span>
@@ -189,8 +209,7 @@
                             <span>Problem Solver</span>
                             <span>Video Editor</span>
                         </div>
-                        <a href="assets/Shubham_Raj_Sharma_Resume.pdf" class="resume-download-btn" target="_blank"
-                            download>
+                        <a href="assets/Shubham_Raj_Resume.pdf" class="resume-download-btn" target="_blank" download>
                             <i class="fas fa-download"></i> Download Resume
                         </a>
 
@@ -281,33 +300,33 @@
             </div>
         </section>
 
-
-        <!-- ============ Contact Section ============ -->
-
-        <section id="contact" data-aos="fade-up">
-            <h2 class="section-title">Contact Me</h2>
-            <div class="contact-links">
-                <a href="https://github.com/shubh100802" target="_blank" class="contact-icon github"
-                    data-tooltip="GitHub">
-                    <i class="fab fa-github"></i>
-
-                </a>
-                <a href="https://www.linkedin.com/in/YOUR_LINKEDIN" target="_blank" class="contact-icon linkedin"
-                    data-tooltip="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-
-                </a>
-                <a href="https://www.instagram.com/itsmeshubh2026?igsh=MW51dXh1ZHc4bjY5Ng==" target="_blank"
-                    class="contact-icon instagram" data-tooltip="Instagram">
-                    <i class="fab fa-instagram"></i>
-
-                </a>
-                <a href="mailto:shubhamraj1414@gmail.com" class="contact-icon gmail" data-tooltip="Gmail">
-                    <i class="fas fa-envelope"></i>
-
-                </a>
+        <!-- ============ Tools I Use Section ============ -->
+        <section id="tools" data-aos="fade-up">
+            <h2 class="section-title">🧰 Tools I Use</h2>
+            <div class="tools-container">
+                <div class="tool-card" data-tooltip="VS Code"><img src="assets/icons/vscode.png" alt="VS Code"
+                        class="tool-icon" /></div>
+                <div class="tool-card" data-tooltip="Intellij Idea"><img src="assets/icons/intellij.png"
+                        alt="Intellij idea" class="tool-icon" /></div>
+                <div class="tool-card" data-tooltip="Git & GitHub"><img src="assets/icons/github.png" alt="Git"
+                        class="tool-icon" /></div>
+                <div class="tool-card" data-tooltip="Postman"><img src="assets/icons/postman-icon.svg" alt="Postman"
+                        class="tool-icon" /></div>
+                <div class="tool-card" data-tooltip="MongoDB Compass"><img src="assets/icons/mongodb.png" alt="MongoDB"
+                        class="tool-icon" /></div>
+                <div class="tool-card" data-tooltip="MongoDB Atlas"><img src="assets/icons/mongodb_atlas.png"
+                        alt="MongoDB Atlas" class="tool-icon" /></div>
+                <div class="tool-card" data-tooltip="MySQL Workbench"><img src="assets/icons/sql.png" alt="SQL"
+                        class="tool-icon" /></div>
+                <div class="tool-card" data-tooltip="XAMPP"><img src="assets/icons/xampp.png" alt="XAMPP"
+                        class="tool-icon" /></div>
+                <div class="tool-card" data-tooltip="AWS Console"><img src="assets/icons/aws.png" alt="AWS"
+                        class="tool-icon" /></div>
+                <div class="tool-card" data-tooltip="Canva"><img src="assets/icons/canva.png" alt="Canva"
+                        class="tool-icon" /></div>
+                <div class="tool-card" data-tooltip="Lightroom"><img src="assets/icons/lightroom.png" alt="Lightroom"
+                        class="tool-icon" /></div>
             </div>
-
         </section>
 
 
@@ -331,7 +350,45 @@
         </section>
     </main>
 
-    <script src="js/script.js"></script>
+
+    <!-- ============ Get in Touch Section ============ -->
+    <section id="get-in-touch" data-aos="fade-up">
+        <h2 class="section-title">📬 Get in Touch</h2>
+        <form id="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <input type="tel" name="phone" placeholder="Your Contact Number" required />
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </section>
+
+
+    <!-- ============ Footer ============ -->
+
+    <footer class="footer">
+        <p class="footer-text">© 2025 Shubham Raj Sharma. All Rights Reserved.</p>
+        <div class="footer-socials">
+            <a href="https://github.com/shubh100802" target="_blank" class="footer-icon" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/shubham-raj-sharma-306aa0247?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bd0P0V5yMT%2FGxxQRI9gWojQ%3D%3D"
+                target="_blank" class="footer-icon" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.instagram.com/itsmeshubh2026" target="_blank" class="footer-icon" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="mailto:shubhamraj1414@gmail.com" class="footer-icon" title="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+    </footer>
+
+
+
 </body>
+
+<script src="js/script.js"></script>
 
 </html>

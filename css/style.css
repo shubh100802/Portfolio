@@ -145,7 +145,7 @@ body {
   align-items: center;
   perspective: 1200px;
   padding: 3rem 2rem;
-  
+
 }
 
 .about-card {
@@ -160,7 +160,7 @@ body {
   transform-style: preserve-3d;
   max-width: 1000px;
   width: 100%;
-      backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 .about-card:hover {
@@ -285,15 +285,16 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
-  
+
 }
 
 .project-card {
   background: transparent;
-      backdrop-filter: blur(10px);
-  width: 300px;
+  backdrop-filter: blur(10px);
+  width: 200px;
   height: 200px;
   perspective: 1000px;
+  margin: 10px;
 }
 
 .card-inner {
@@ -326,6 +327,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  z-index: 2;
 }
 
 .card-back {
@@ -334,6 +336,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  z-index: 1;
 }
 
 .card-back a {
@@ -451,115 +454,105 @@ body {
   }
 }
 
-
-/* ============ Contact ============ */
-
-#contact {
+/* ============ Tools Section ============ */
+#tools {
   padding: 4rem 2rem;
-  color: #fff;
   text-align: center;
   perspective: 1000px;
-}
-
-.section-title {
-  font-size: 3rem;
-  margin-bottom: 3rem;
   color: #00ffff;
-  text-shadow:
-    0 0 10px #00ffff,
-    0 0 20px #00ffff,
-    0 0 40px #00ffff;
-  transform: rotateX(10deg) rotateY(5deg);
-  animation: pulseTitle 3s infinite;
 }
 
-.contact-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  transform-style: preserve-3d;
+.tools-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.contact-icon {
-  width: 180px;
-  height: 180px;
+.tool-card {
+  width: 90px;
+  height: 90px;
+  margin: 10px;
   background: rgba(255, 255, 255, 0.05);
-  border-radius: 20px;
-  box-shadow:
-    0 0 20px rgba(0, 255, 255, 0.2),
-    inset 0 0 15px rgba(0, 255, 255, 0.1);
-  text-decoration: none;
-  color: #00ffff;
-  font-size: 2rem;
-  font-weight: bold;
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 50%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: transform 0.5s, box-shadow 0.4s;
-  transform: rotateY(5deg) rotateX(5deg);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(0, 255, 255, 0.3);
-}
-
-.contact-icon:hover {
-  transform: rotateY(0deg) rotateX(0deg) scale(1.05);
-  box-shadow:
-    0 0 30px #00ffff,
-    0 0 60px #00ffff;
-}
-
-.contact-icon i {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-}
-
-.contact-icon span {
-  font-size: 1rem;
-  letter-spacing: 1px;
-}
-
-.contact-icon {
-  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(8px);
   cursor: pointer;
-  animation: floatIcon 4s ease-in-out infinite;
 }
 
-.contact-icon::after {
+
+.tool-card i {
+  font-size: 1.8rem;
+  margin-bottom: 0.6rem;
+}
+
+.tool-card span {
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 0 5px;
+}
+
+/* Tooltip on hover */
+.tool-card::after {
   content: attr(data-tooltip);
   position: absolute;
-  bottom: -2.5rem;
+  bottom: -2.2rem;
   background: #00ffff;
   color: #000;
-  padding: 6px 12px;
-  border-radius: 8px;
-  white-space: nowrap;
-  font-size: 0.8rem;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
   font-weight: bold;
   opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.3s, transform 0.3s;
   pointer-events: none;
-  z-index: 10;
+  transform: translateY(10px);
+  transition: all 0.3s;
 }
 
-.contact-icon:hover::after {
+.tool-card:hover::after {
   opacity: 1;
   transform: translateY(0);
 }
 
-@keyframes floatIcon {
-  0% {
-    transform: rotateY(5deg) rotateX(5deg) translateY(0px);
+.tool-card:hover {
+  transform: scale(1.1) rotateZ(3deg);
+  box-shadow: 0 0 20px #00ffff;
+}
+
+
+.tool-card img.tool-icon {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 0.5rem;
+  object-fit: contain;
+}
+
+
+@media (max-width: 768px) {
+  .tool-card {
+    width: 70px;
+    height: 70px;
   }
 
-  50% {
-    transform: rotateY(0deg) rotateX(0deg) translateY(-10px);
+  .tool-card img {
+    width: 30px;
+    height: 30px;
   }
 
-  100% {
-    transform: rotateY(5deg) rotateX(5deg) translateY(0px);
+  .tool-card i {
+    font-size: 2rem;
+  }
+
+  .tool-card span {
+    font-size: 0.8rem;
   }
 }
 
@@ -620,6 +613,110 @@ body {
   }
 }
 
+
+/* ============ Get in Touch ============ */
+
+#get-in-touch {
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #fff;
+}
+
+#contact-form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  perspective: 1000px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  padding: 1rem;
+  border: 1px solid rgba(0, 255, 255, 0.4);
+  border-radius: 10px;
+  background: rgba(0, 255, 255, 0.05);
+  color: #00ffff;
+  font-size: 1rem;
+  outline: none;
+  resize: none;
+  backdrop-filter: blur(4px);
+  transition: border 0.3s, transform 0.3s;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  border-color: #00ffff;
+  transform: scale(1.02);
+}
+
+.submit-btn {
+  background: #00ffff;
+  color: #000;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.submit-btn:hover {
+  transform: scale(1.05);
+}
+
+
+/* ============ Footer ============ */
+.footer {
+  /* padding: 2rem 1rem;
+  /* background: rgba(255, 255, 255, 0.03); */
+  border-top: 1px solid rgba(255, 255, 255, 0.1); 
+  /* text-align: center; */
+  color: #00ffff;
+  backdrop-filter: blur(8px);
+  /* box-shadow: 0 -2px 30px rgba(0, 255, 255, 0.1); */
+  margin-top: 2rem;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-icon {
+  color: #00ffff;
+  font-size: 1.8rem;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+  text-decoration: none;
+}
+
+.footer-icon:hover {
+  transform: scale(1.2) rotateZ(3deg);
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+}
+
+.footer-text {
+  justify-content: left;
+  font-size: 0.9rem;
+  color: #a0dcdc;
+  letter-spacing: 0.5px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .footer-icon {
+    font-size: 1.5rem;
+  }
+
+  .footer-text {
+    font-size: 0.8rem;
+  }
+}
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -632,7 +729,7 @@ html {
   background: #00ffff;
   color: #000;
   padding: 0.75rem;
-  border-radius: 50%;
+  border-radius: 70%;
   font-size: 1.2rem;
   z-index: 9999;
   box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
@@ -652,4 +749,83 @@ html {
     font-size: 1rem;
     padding: 0.6rem;
   }
+}
+
+
+/* ============ Light Mode Styling ============ */
+body:not(.dark) {
+  background: radial-gradient(circle at top left, #e0f7fa, #f5f7fa);
+  color: #111;
+}
+
+
+body:not(.dark) .navbar {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+body:not(.dark) .logo,
+body:not(.dark) .nav-links li a,
+body:not(.dark) .section-title,
+body:not(.dark) .resume-download-btn {
+  color: #0077b6;
+}
+body:not(.dark) .about-content,
+body:not(.dark) #typed-role {
+  color: #0077b6;
+}
+
+body:not(.dark) .roles-tags span{
+color: #000;
+}
+body:not(.dark) .resume-download-btn {
+  border: 1px solid #0077b6;
+}
+
+body:not(.dark) .resume-download-btn:hover {
+  background: #0077b6;
+  color: #fff;
+  box-shadow: 0 0 15px #0077b6;
+}
+
+body:not(.dark) .project-card .card-front,
+body:not(.dark) .project-card .card-back,
+body:not(.dark) .about-card,
+body:not(.dark) .skill-card,
+body:not(.dark) .hobby-card,
+body:not(.dark) .contact-icon,
+body:not(.dark) .tool-card {
+  background: rgba(255, 255, 255, 0.85);
+  color: #111;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+body:not(.dark) .card-front,
+body:not(.dark) .card-back {
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  color: #111;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+body:not(.dark) .project-card:hover .card-inner {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+body:not(.dark) .skill-card:hover,
+body:not(.dark) .hobby-card:hover{
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+}
+
+body:not(.dark) .section-title {
+  color: #0077b6;
+  text-shadow: none;
+}
+
+body:not(.dark) .contact-icon i,
+body:not(.dark) .footer-icon,
+body:not(.dark) .footer-text  {
+  color: #0077b6;
 }

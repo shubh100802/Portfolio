@@ -49,10 +49,32 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+
 // ============ Color change ============ //
 
-const toggle = document.getElementById("toggle-theme");
-toggle.addEventListener("click", () => {
+document.getElementById("toggle-theme").addEventListener("click", () => {
   document.body.classList.toggle("dark");
+
+  // Destroy old particles canvas
+  document.getElementById("particles-js").innerHTML = "";
+
+  const isDark = document.body.classList.contains("dark");
+  loadParticles(isDark ? "#00ffff" : "#0077b6", isDark ? "#00ffff" : "#0077b6");
+});
+
+
+// ============ Gmail ============ //
+
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  emailjs.sendForm("service_v6kui43", "template_9ti6z9g", this)
+    .then(function () {
+      alert("Message sent successfully! ✅");
+      document.getElementById("contact-form").reset();
+    }, function (error) {
+      alert("Oops! Something went wrong. ❌");
+      console.log(error);
+    });
 });
 
