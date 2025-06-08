@@ -764,6 +764,16 @@ body:not(.dark) .navbar {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
+body:not(.dark) .hamburger{
+  color: #0077b6;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+body:not(.dark) .nav-links{
+  background: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
 body:not(.dark) .logo,
 body:not(.dark) .nav-links li a,
 body:not(.dark) .section-title,
