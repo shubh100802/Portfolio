@@ -837,6 +837,10 @@ body:not(.dark) .section-title {
   text-shadow: none;
 }
 
+body:not(.dark) #contact-form input{
+  color: #000;
+}
+
 body:not(.dark) .contact-icon i,
 body:not(.dark) .footer-icon,
 body:not(.dark) .footer-text,
