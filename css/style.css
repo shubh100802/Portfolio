@@ -161,6 +161,7 @@ body {
   max-width: 1000px;
   width: 100%;
   backdrop-filter: blur(10px);
+  animation: floatSkillGlow 5s ease-in-out infinite;
 }
 
 .about-card:hover {
@@ -295,6 +296,7 @@ body {
   height: 200px;
   perspective: 1000px;
   margin: 10px;
+  animation: floatSkillGlow 5s ease-in-out infinite;
 }
 
 .card-inner {
@@ -483,6 +485,7 @@ body {
   align-items: center;
   box-shadow: 0 4px 15px rgba(0, 255, 255, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: floatSkillGlow 5s ease-in-out infinite;
   backdrop-filter: blur(8px);
   cursor: pointer;
 }
@@ -837,7 +840,8 @@ body:not(.dark) .section-title {
   text-shadow: none;
 }
 
-body:not(.dark) #contact-form input{
+body:not(.dark) #contact-form input,
+body:not(.dark) #contact-form textarea{
   color: #000;
 }
 
