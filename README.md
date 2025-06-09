@@ -1,27 +1,27 @@
-# 🚀 Shubham Raj Sharma – Portfolio
+# Shubham Raj Sharma – Portfolio
 
 Welcome to my interactive **3D Portfolio Website**!  
 I’m a final-year Computer Science student passionate about **Full Stack Development**, **Cybersecurity**, and **Software Engineering**.
 
-🌐 Live Site: [View Portfolio](http://shubh100802.github.io/Portfolio/)
+Live Site: [View Portfolio](http://shubh100802.github.io/Portfolio/)
 
 ---
 
-## ✨ Features
+## Features
 
-🔥 3D Animated Interface (HTML/CSS/JS)
-🎬 Interactive Cards, Hover Effects & Flip Animations
-🌠 Animated Particle Background (with icons, stars, and shapes)
-🎯 Sections: About, Projects, Skills, Hobbies, and Contact
-🌓 Dark Mode Toggle
-📨 Contact via GitHub, LinkedIn, Instagram, or Email
-📄 Downloadable Resume
-⚡ Scroll-based Animations (AOS.js)
-🌙 Splash Screen Loader with "Radhe Radhe" Greeting
+3D Animated Interface (HTML/CSS/JS)
+Interactive Cards, Hover Effects & Flip Animations
+Animated Particle Background (with icons, stars, and shapes)
+Sections: About, Projects, Skills, Hobbies, and Contact
+Dark Mode Toggle
+Contact via GitHub, LinkedIn, Instagram, or Email
+Downloadable Resume
+Scroll-based Animations (AOS.js)
+Splash Screen Loader with "Radhe Radhe" Greeting
 
 ---
 
-## 📁 Folder Structure
+## Folder Structure
 
 3d-portfolio/
 │
@@ -53,17 +53,17 @@ I’m a final-year Computer Science student passionate about **Full Stack Develo
 
 ---
 
-## 💼 Projects Featured
+## Projects Featured
 
 | Project                          | Live Demo | GitHub |
 |----------------------------------|-----------|--------|
-| 🧮 Student Marks Management      | [Live](https://student-marks-b29u.onrender.com/index.html) | [Repo](https://github.com/shubh100802/Student_Marks) |
-| 🧑‍💻 Portfolio Website (v1)       | [Live](https://shubh100802.github.io/CODSOFT-Task1-PORTFOLIO/) | [Repo](https://github.com/shubh100802/CODSOFT-Task1-PORTFOLIO) |
-| 🧪 PhysicsCentre.in Site         | [Live](https://shubh100802.github.io/physicscentre.in-new/) | [Repo](https://github.com/shubh100802/physicscentre.in-new) |
+| Student Marks Management      | [Live](https://student-marks-b29u.onrender.com/index.html) | [Repo](https://github.com/shubh100802/Student_Marks) |
+| Portfolio Website (v1)       | [Live](https://shubh100802.github.io/CODSOFT-Task1-PORTFOLIO/) | [Repo](https://github.com/shubh100802/CODSOFT-Task1-PORTFOLIO) |
+| PhysicsCentre.in Site         | [Live](https://shubh100802.github.io/physicscentre.in-new/) | [Repo](https://github.com/shubh100802/physicscentre.in-new) |
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 **Frontend:** HTML5, CSS3, JavaScript
 **Animations:** AOS.js, Particles.js
@@ -73,24 +73,24 @@ I’m a final-year Computer Science student passionate about **Full Stack Develo
 
 ---
 
-## 📞 Contact Me
+## Contact Me
 
 You can reach out via:
 
-🔗 [GitHub](https://github.com/shubh100802)
-💼 [LinkedIn](https://www.linkedin.com/in/shubham-raj-sharma-306aa0247)
-📸 [Instagram](https://www.instagram.com/itsmeshubh2026)
-📧 Email: [shubhamraj1414@gmail.com](mailto:shubhamraj1414@gmail.com)
+[GitHub](https://github.com/shubh100802)
+[LinkedIn](https://www.linkedin.com/in/shubham-raj-sharma-306aa0247)
+[Instagram](https://www.instagram.com/itsmeshubh2026)
+Email: [shubhamraj1414@gmail.com](mailto:shubhamraj1414@gmail.com)
 
 ---
 
-## 🧘‍♂️ Hobbies
+## Hobbies
 
-🏏 Playing Cricket
-🎧 Listening to Music
-📖 Reading Religious Books
-🔐 Cybersecurity Research
-🎬 Video & Image Editing
+Playing Cricket
+Listening to Music
+Reading Religious Books
+Cybersecurity Research
+Video & Image Editing
 
 ---
 
