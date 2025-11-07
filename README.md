@@ -59,7 +59,7 @@ Splash Screen Loader with "Radhe Radhe" Greeting
 |----------------------------------|-----------|--------|
 | Student Marks Management      | [Live](https://student-marks-b29u.onrender.com/index.html) | [Repo](https://github.com/shubh100802/Student_Marks) |
 | Portfolio Website (v1)       | [Live](https://shubh100802.github.io/CODSOFT-Task1-PORTFOLIO/) | [Repo](https://github.com/shubh100802/CODSOFT-Task1-PORTFOLIO) |
-| PhysicsCentre.in Site         | [Live](https://shubh100802.github.io/physicscentre.in-new/) | [Repo](https://github.com/shubh100802/physicscentre.in-new) |
+| PhysicsCentre.in Site         | [Live](https://physicscentre.onrender.com) | [Repo](https://github.com/shubh100802/physicscentre.in-new) |
 
 ---
 
@@ -96,3 +96,4 @@ Video & Image Editing
 
 
 > Made with 💻, ⚡, and a touch of 🕉️ by Shubham Raj Sharma
+
