@@ -79,7 +79,7 @@ You can reach out via:
 
 [GitHub](https://github.com/shubh100802)
 [LinkedIn](https://www.linkedin.com/in/shubham-raj-sharma-306aa0247)
-[Instagram](https://www.instagram.com/itsmeshubh2026)
+[Instagram](https://www.instagram.com/itsmeshubh1008)
 Email: [shubhamraj1414@gmail.com](mailto:shubhamraj1414@gmail.com)
 
 ---
@@ -96,4 +96,5 @@ Video & Image Editing
 
 
 > Made with 💻, ⚡, and a touch of 🕉️ by Shubham Raj Sharma
+
 
