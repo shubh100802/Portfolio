@@ -1,0 +1,557 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shubham Raj Sharma - Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Fugaz+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <link rel="icon" href="assets/icons/mongodb.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("8Zt_HwskUUnFVR2MY");
+    })();
+  </script>
+</head>
+<body>
+  <div id="splash">
+    <div class="splash-text">Radhe Radhe 🙏! Welcome to My Portfolio</div>
+  </div>
+
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-orb orb-3"></div>
+
+  <a href="#" class="back-to-top" title="Back to top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a class="logo" href="#hero">Shubh<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#hobbies">Hobbies</a></li>
+        <li><a href="#get-in-touch">Contact</a></li>
+      </ul>
+      <div class="nav-controls">
+        <button id="toggle-theme" class="theme-btn" type="button" aria-label="Toggle theme">🌙</button>
+        <button class="hamburger" type="button" aria-label="Open menu">&#9776;</button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="hero">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="hero-kicker">Aspiring Software Development Engineer</p>
+        <h1>Shubham Raj Sharma</h1>
+        <p class="hero-subtext">
+          Building production-ready software and backend systems with a strong focus on reliability, security, and clean architecture.
+        </p>
+        <div class="hero-meta">
+          <span>Open to SDE and Backend Development Roles</span>
+        </div>
+        <p class="role-rotator" aria-live="polite">
+          <span class="role-label">Focus:</span>
+          <span id="typed-role" class="role-text"></span>
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="hero-cta">Explore Projects</a>
+          <a href="assets/Shubham_Raj_Sharma_SDE.pdf" class="hero-cta hero-cta-ghost" target="_blank" rel="noopener noreferrer" download>View Resume</a>
+        </div>
+        <div class="hero-tech-strip" aria-label="Primary stack">
+          <span>Java</span>
+          <span>Python</span>
+          <span>Node.js</span>
+          <span>MongoDB</span>
+          <span>MySQL</span>
+          <!-- <span>JWT</span> -->
+        </div>
+      </div>
+      <aside class="hero-visual" aria-label="Profile highlights">
+        <div class="hero-avatar-ring">
+          <img src="assets/images/WhatsApp Image 2025-05-29 at 15.49.23_9f1b84c8.jpg" alt="Shubham Raj Sharma portrait" />
+        </div>
+        <div class="hero-floating-card hero-card-a">
+          <strong><i class="fas fa-code hero-card-icon" aria-hidden="true"></i>Software Development</strong>
+          <span>Java, OOP, and DSA-focused engineering for reliable application architecture</span>
+        </div>
+        <div class="hero-floating-card hero-card-b">
+          <strong><i class="fas fa-server hero-card-icon" aria-hidden="true"></i>Backend First</strong>
+          <span>Java, Node.js, SQL, REST APIs, authentication, and database design</span>
+        </div>
+        <div class="hero-floating-card hero-card-c">
+          <strong><i class="fas fa-rocket hero-card-icon" aria-hidden="true"></i>Production Ready</strong>
+          <span>Auth, DB design, deployment, API testing, end-to-end delivery</span>
+        </div>
+      </aside>
+    </div>
+    <div class="hero-highlights">
+      <article class="hero-highlight-card">
+        <h3>8.01 CGPA</h3>
+        <p>B.Tech CSE at VIT Bhopal (2022-2026)</p>
+      </article>
+      <article class="hero-highlight-card">
+        <h3>20+ APIs Validated</h3>
+        <p>Tested and debugged backend endpoints using Postman and Git workflows</p>
+      </article>
+      <article class="hero-highlight-card">
+        <h3>Live Product</h3>
+        <p>MyLoanCredit.com deployed with production workflows, domain, and HTTPS</p>
+      </article>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" data-aos="fade-up">
+      <h2 class="section-title">Professional Summary</h2>
+      <div class="about-card">
+        <div class="about-content">
+          <p class="about-kicker">Software Development & Backend Engineering</p>
+          <h3>Hey, I am Shubham</h3>
+          <p class="about-lead">
+            I am a final-year Computer Science undergraduate at VIT Bhopal and an aspiring Software Development Engineer focused on software development and backend engineering, with strong foundations in Java, SQL, REST APIs, authentication, and scalable data-driven architecture.
+          </p>
+          <div class="about-strengths">
+            <article class="about-strength">
+              <h4>API and Auth</h4>
+              <p>Designed secure REST APIs with JWT-based authentication and role-aware access control.</p>
+            </article>
+            <article class="about-strength">
+              <h4>Data and Backend</h4>
+              <p>Built database-driven services using Java, Node.js, MongoDB, and MySQL with clean schemas.</p>
+            </article>
+            <article class="about-strength">
+              <h4>Production Mindset</h4>
+              <p>Worked on live deployments with domain and HTTPS setup, API validation, and debugging workflows.</p>
+            </article>
+          </div>
+          <div class="roles-tags">
+            <span>Software Development Engineer</span>
+            <span>Backend Engineering</span>
+            <span>Java</span>
+            <span>Python</span>
+            <span>SQL & Database Design</span>
+            <span>RESTful APIs</span>
+            <span>Node.js & Express.js</span>
+            <span>Authentication & JWT</span>
+            <span>Problem Solving (DSA)</span>
+          </div>
+          <div class="about-actions">
+            <a href="assets/Shubham_Raj_Sharma_SDE.pdf" class="resume-download-btn" target="_blank" rel="noopener noreferrer" download>
+              <i class="fas fa-download"></i> Download Resume
+            </a>
+            <a href="https://www.linkedin.com/in/shubham-raj-sharma-306aa0247" class="resume-download-btn resume-alt-btn" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" data-aos="fade-up">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-grid">
+        <article class="project-card accent-loan">
+          <div class="card-inner">
+            <div class="card-front">
+              <span class="project-icon"><i class="fas fa-hand-holding-usd" aria-hidden="true"></i></span>
+              <h3>MyLoanCredit.com</h3>
+              <p>Live full-stack loan platform with OTP auth, admin workflows, and real-time status tracking.</p>
+            </div>
+            <div class="card-back">
+              <span class="project-back-icon" aria-hidden="true"><i class="fas fa-hand-holding-usd"></i></span>
+              <p><strong>Stack:</strong> Node.js, Express.js, MongoDB, JWT, HTML/CSS/JS</p>
+              <p class="project-impact">Impact: Live platform with secure user/admin workflows and production deployment.</p>
+              <div class="project-links">
+                <a href="https://github.com/shubh100802/Loan-App" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://myloancredit.com" target="_blank" rel="noopener noreferrer">Live Demo</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card accent-dispatch">
+          <div class="card-inner">
+            <div class="card-front">
+              <span class="project-icon"><i class="fas fa-truck-loading" aria-hidden="true"></i></span>
+              <h3>Dispatch Load Balancer</h3>
+              <p>Priority-aware dispatch engine with capacity checks and nearest-vehicle optimization logic.</p>
+            </div>
+            <div class="card-back">
+              <span class="project-back-icon" aria-hidden="true"><i class="fas fa-truck-loading"></i></span>
+              <p><strong>Stack:</strong> Java, Spring Boot, JPA, MySQL, H2, JUnit</p>
+              <p class="project-impact">Impact: Optimized dispatch allocation with priority and distance-aware assignment.</p>
+              <div class="project-links">
+                <a href="https://github.com/shubh100802/Backend-Dispatch-Load-Balancer" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card accent-geo">
+          <div class="card-inner">
+            <div class="card-front">
+              <span class="project-icon"><i class="fas fa-map-marked-alt" aria-hidden="true"></i></span>
+              <h3>Geo-Attendance-System</h3>
+              <p>Location-aware attendance system with anti-proxy checks and secure role-based access.</p>
+            </div>
+            <div class="card-back">
+              <span class="project-back-icon" aria-hidden="true"><i class="fas fa-map-marked-alt"></i></span>
+              <p><strong>Stack:</strong> HTML, CSS, JS, Node.js, MongoDB</p>
+              <p class="project-impact">Impact: Strengthened attendance integrity using geofencing and anti-proxy checks.</p>
+              <div class="project-links">
+                <a href="https://github.com/shubh100802/Geo-Attendance-System.git" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://geo-attendance-system.onrender.com/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card accent-roommate">
+          <div class="card-inner">
+            <div class="card-front">
+              <span class="project-icon"><i class="fas fa-users-cog" aria-hidden="true"></i></span>
+              <h3>Hostel RoomMate Sync</h3>
+              <p>Preference-driven roommate and room allocation workflow built for large student batches.</p>
+            </div>
+            <div class="card-back">
+              <span class="project-back-icon" aria-hidden="true"><i class="fas fa-users-cog"></i></span>
+              <p><strong>Stack:</strong> Node.js, MongoDB, JWT, Google Docs, HTML/CSS/JS</p>
+              <p class="project-impact">Impact: Reduced manual hostel allocation effort with preference-driven automation.</p>
+              <div class="project-links">
+                <a href="https://github.com/shubh100802/Hostel-RoomMate-Sync.git" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://hostel-roommate-sync.onrender.com/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card accent-onboarding">
+          <div class="card-inner">
+            <div class="card-front">
+              <span class="project-icon"><i class="fas fa-bullhorn" aria-hidden="true"></i></span>
+              <h3>Hostel Onboarding Display</h3>
+              <p>Live display and announcement system to streamline hostel onboarding counter operations.</p>
+            </div>
+            <div class="card-back">
+              <span class="project-back-icon" aria-hidden="true"><i class="fas fa-bullhorn"></i></span>
+              <p><strong>Stack:</strong> Node.js, MongoDB, Sheets API, HTML/CSS/JS</p>
+              <p class="project-impact">Impact: Enabled live onboarding updates and announcements for smoother operations.</p>
+              <div class="project-links">
+                <a href="https://github.com/shubh100802/Hostel-OnBording-Display.git" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://hostel-onbording-display.onrender.com" target="_blank" rel="noopener noreferrer">Live Demo</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card accent-marks">
+          <div class="card-inner">
+            <div class="card-front">
+              <span class="project-icon"><i class="fas fa-chart-line" aria-hidden="true"></i></span>
+              <h3>Student Marks Management</h3>
+              <p>Role-based marks management platform with secure CRUD operations and analytics workflows.</p>
+            </div>
+            <div class="card-back">
+              <span class="project-back-icon" aria-hidden="true"><i class="fas fa-chart-line"></i></span>
+              <p><strong>Stack:</strong> HTML, CSS, JS, Node.js, MongoDB</p>
+              <p class="project-impact">Impact: Improved marks tracking with secure, role-based academic workflows.</p>
+              <div class="project-links">
+                <a href="https://github.com/shubh100802/Student_Marks.git" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://student-marks-b29u.onrender.com/index.html" target="_blank" rel="noopener noreferrer">Live Demo</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card accent-physics">
+          <div class="card-inner">
+            <div class="card-front">
+              <span class="project-icon"><i class="fas fa-atom" aria-hidden="true"></i></span>
+              <h3>Physics Centre</h3>
+              <p>Academic portal for resources, announcements, and achievement-focused student communication.</p>
+            </div>
+            <div class="card-back">
+              <span class="project-back-icon" aria-hidden="true"><i class="fas fa-atom"></i></span>
+              <p><strong>Stack:</strong> HTML, CSS, JS, Bootstrap, Google Drive</p>
+              <p class="project-impact">Impact: Centralized academic resources and updates for student accessibility.</p>
+              <div class="project-links">
+                <a href="https://github.com/shubh100802/physicscentre.in-new.git" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://physicscentre.onrender.com" target="_blank" rel="noopener noreferrer">Live Demo</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card accent-library">
+          <div class="card-inner">
+            <div class="card-front">
+              <span class="project-icon"><i class="fas fa-book-reader" aria-hidden="true"></i></span>
+              <h3>Library Management System</h3>
+              <p>Desktop management suite for cataloging, issue/return cycles, fines, and backup workflows.</p>
+            </div>
+            <div class="card-back">
+              <span class="project-back-icon" aria-hidden="true"><i class="fas fa-book-reader"></i></span>
+              <p><strong>Stack:</strong> Java Swing, SQL, MySQL, JDBC</p>
+              <p class="project-impact">Impact: Streamlined issue/return cycles, fines, and record management workflows.</p>
+              <div class="project-links">
+                <a href="https://github.com/shubh100802/Library-Management-Java-and-SQL-" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" data-aos="fade-up">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-shell">
+        <div class="skills-intro">
+          <p class="skills-kicker">Core Strengths</p>
+          <h3>Software Development + Backend Engineering</h3>
+          <div class="skills-highlights" aria-label="Skills highlights">
+            <span><i class="fas fa-layer-group" aria-hidden="true"></i> 5 Focus Areas</span>
+            <span><i class="fas fa-code-branch" aria-hidden="true"></i> 20+ Relevant Skills</span>
+            <span><i class="fas fa-shield-alt" aria-hidden="true"></i> Backend-First Mindset</span>
+          </div>
+        </div>
+
+        <div class="skills-container">
+          <article class="skills-cluster cluster-sde">
+            <h4><i class="fas fa-code" aria-hidden="true"></i> Software Development</h4>
+            <div class="skill-tags">
+              <span>Java</span>
+              <span>Python</span>
+              <span>OOP</span>
+              <span>DSA (Java)</span>
+              <!-- <span>Problem Solving</span> -->
+              <span>C++ (Basics)</span>
+            </div>
+          </article>
+
+          <article class="skills-cluster cluster-backend">
+            <h4><i class="fas fa-server" aria-hidden="true"></i> Backend Engineering</h4>
+            <div class="skill-tags">
+              <span>Node.js</span>
+              <span>Express.js</span>
+              <span>RESTful APIs</span>
+              <span>JWT Auth</span>
+              <span>API Testing</span>
+            </div>
+          </article>
+
+          <article class="skills-cluster cluster-data">
+            <h4><i class="fas fa-database" aria-hidden="true"></i> Databases</h4>
+            <div class="skill-tags">
+              <span>MySQL</span>
+              <span>MongoDB</span>
+              <span>SQL</span>
+              <span>Database Design</span>
+            </div>
+          </article>
+
+          <article class="skills-cluster cluster-web">
+            <h4><i class="fas fa-layer-group" aria-hidden="true"></i> Web + Delivery</h4>
+            <div class="skill-tags">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+              <span>Git & GitHub</span>
+              <span>Cybersecurity Fundamentals</span>
+            </div>
+          </article>
+
+          <article class="skills-cluster cluster-creative">
+            <h4><i class="fas fa-palette" aria-hidden="true"></i> Additional Skills</h4>
+            <div class="skill-tags">
+              <span>Video Editing</span>
+              <span>Image Editing</span>
+              <span>Content Design</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="tools" data-aos="fade-up">
+      <h2 class="section-title">Tools I Use</h2>
+      <div class="tools-shell">
+        <p class="tools-kicker">
+          <span class="tools-kicker-label">Development Ecosystem:</span>
+          <span id="typed-tool" class="tools-typed" aria-live="polite"></span>
+        </p>
+        <div class="tools-meta" aria-label="Tools overview">
+          <span><i class="fas fa-toolbox" aria-hidden="true"></i><strong id="tool-count">0</strong> Tools</span>
+          <span><i class="fas fa-layer-group" aria-hidden="true"></i> IDE + DB + API</span>
+          <span><i class="fas fa-bolt" aria-hidden="true"></i> Build to Deploy</span>
+        </div>
+        <div class="tools-container">
+          <div class="tool-card" data-tooltip="VS Code"><img src="assets/icons/vscode.png" alt="VS Code" class="tool-icon" /></div>
+          <div class="tool-card" data-tooltip="IntelliJ IDEA"><img src="assets/icons/intellij.png" alt="Intellij Idea" class="tool-icon" /></div>
+          <div class="tool-card" data-tooltip="GitHub"><img src="assets/icons/github.png" alt="GitHub" class="tool-icon" /></div>
+          <div class="tool-card" data-tooltip="Postman"><img src="assets/icons/postman-icon.svg" alt="Postman" class="tool-icon" /></div>
+          <div class="tool-card" data-tooltip="MongoDB Compass"><img src="assets/icons/mongodb.png" alt="MongoDB" class="tool-icon" /></div>
+          <div class="tool-card" data-tooltip="MongoDB Atlas"><img src="assets/icons/mongodb_atlas.png" alt="MongoDB Atlas" class="tool-icon" /></div>
+          <div class="tool-card" data-tooltip="MySQL Workbench"><img src="assets/icons/sql.png" alt="MySQL" class="tool-icon" /></div>
+          <div class="tool-card" data-tooltip="XAMPP"><img src="assets/icons/xampp.png" alt="Xampp" class="tool-icon" /></div>
+          <div class="tool-card" data-tooltip="AWS Console"><img src="assets/icons/aws.png" alt="AWS" class="tool-icon" /></div>
+          <div class="tool-card" data-tooltip="Canva"><img src="assets/icons/canva.png" alt="Canva" class="tool-icon" /></div>
+          <div class="tool-card" data-tooltip="Lightroom"><img src="assets/icons/lightroom.png" alt="Lightroom" class="tool-icon" /></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="hobbies" data-aos="fade-up">
+      <h2 class="section-title">Hobbies</h2>
+      <div class="hobbies-shell">
+        <p class="hobbies-kicker">Beyond Work</p>
+        <p class="hobbies-lead">
+          Activities that sharpen my focus, creativity, and problem-solving mindset outside core development work.
+        </p>
+        <div class="hobbies-metrics" aria-label="Hobby strengths">
+          <span><i class="fas fa-brain" aria-hidden="true"></i> Critical Thinking</span>
+          <span><i class="fas fa-shield-virus" aria-hidden="true"></i> Security Awareness</span>
+          <span><i class="fas fa-pen-ruler" aria-hidden="true"></i> Creative Discipline</span>
+        </div>
+
+        <div class="hobbies-container">
+          <article class="hobby-tile featured">
+            <h3><i class="fas fa-shield-alt" aria-hidden="true"></i> Cybersecurity Research</h3>
+            <p>Learning secure practices, vulnerabilities, and defensive thinking for better system design.</p>
+          </article>
+
+          <article class="hobby-tile">
+            <h3><i class="fas fa-puzzle-piece" aria-hidden="true"></i> Problem Solving</h3>
+            <p>Regular practice with logical challenges and DSA-driven thinking.</p>
+          </article>
+
+          <article class="hobby-tile">
+            <h3><i class="fas fa-laptop-code" aria-hidden="true"></i> Side Project Building</h3>
+            <p>Experimenting with new stacks and ideas through practical mini-builds.</p>
+          </article>
+
+          <article class="hobby-tile">
+            <h3><i class="fas fa-video" aria-hidden="true"></i> Creative Editing</h3>
+            <p>Video and image editing for storytelling, presentation quality, and design sense.</p>
+          </article>
+        </div>
+
+        <div class="hobbies-tags" aria-label="Additional interests">
+          <span>Tech Content Creation</span>
+          <span>Exploring New Tech</span>
+          <span>Tech-based Games</span>
+          <span>Cricket</span>
+          <span>Music</span>
+          <span>Reading</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section id="get-in-touch" data-aos="fade-up">
+    <h2 class="section-title">Get in Touch</h2>
+    <div class="contact-shell">
+      <div class="contact-orbs" aria-hidden="true">
+        <span class="contact-orb contact-orb-a"></span>
+        <span class="contact-orb contact-orb-b"></span>
+        <span class="contact-orb contact-orb-c"></span>
+      </div>
+      <aside class="contact-panel" aria-label="Contact information">
+        <p class="contact-kicker">Let's Connect</p>
+        <h3>Open to SDE and Backend opportunities</h3>
+        <p>Feel free to reach out for internships, full-time roles, collaborations, or project discussions.</p>
+        <div class="contact-badges" aria-label="Availability">
+          <span><i class="fas fa-clock" aria-hidden="true"></i>Usually replies within 24h</span>
+          <span><i class="fas fa-briefcase" aria-hidden="true"></i>Open to internships and full-time roles</span>
+        </div>
+
+        <div class="contact-points">
+          <a href="mailto:shubhamraj1414@gmail.com" class="contact-point">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <span>shubhamraj1414@gmail.com</span>
+          </a>
+          <a href="https://www.linkedin.com/in/shubham-raj-sharma-306aa0247" target="_blank" rel="noopener noreferrer" class="contact-point">
+            <i class="fab fa-linkedin" aria-hidden="true"></i>
+            <span>linkedin.com/in/shubham-raj-sharma-306aa0247</span>
+          </a>
+          <a href="https://github.com/shubh100802" target="_blank" rel="noopener noreferrer" class="contact-point">
+            <i class="fab fa-github" aria-hidden="true"></i>
+            <span>github.com/shubh100802</span>
+          </a>
+        </div>
+
+        <div class="contact-panel-foot" aria-label="Current status">
+          <p><i class="fas fa-location-dot" aria-hidden="true"></i> Samastipur, India</p>
+          <p><i class="fas fa-graduation-cap" aria-hidden="true"></i> Final-year CSE, VIT Bhopal (2026)</p>
+          <p><i class="fas fa-circle contact-live-dot" aria-hidden="true"></i> Available for SDE & Backend opportunities</p>
+        </div>
+      </aside>
+
+      <form id="contact-form">
+        <div class="contact-form-head contact-field-full">
+          <h3>Send a Message</h3>
+          <p>I will get back to you as soon as possible.</p>
+        </div>
+        <div class="contact-field">
+          <label for="contact-name">Your Name</label>
+          <input id="contact-name" type="text" name="name" placeholder="Enter your name" required />
+        </div>
+        <div class="contact-field">
+          <label for="contact-email">Your Email</label>
+          <input id="contact-email" type="email" name="email" placeholder="Enter your email" required />
+        </div>
+        <div class="contact-field">
+          <label for="contact-phone">Contact Number</label>
+          <input id="contact-phone" type="tel" name="phone" placeholder="Enter your contact number" required />
+        </div>
+        <input type="text" name="company" class="contact-hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <div class="contact-field contact-field-full">
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" name="message" placeholder="Write your message" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn"><i class="fas fa-paper-plane" aria-hidden="true"></i>Send Message</button>
+        <p id="contact-status" class="contact-status" aria-live="polite"></p>
+        <p class="contact-note">Your details stay private and are used only to respond to your message.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p class="footer-line">
+      <span class="footer-copy">© 2026 Shubham Raj Sharma</span>
+      <span class="footer-sep">•</span>
+      <a href="https://github.com/shubh100802" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
+      <span class="footer-sep">•</span>
+      <a href="https://www.linkedin.com/in/shubham-raj-sharma-306aa0247" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+      <span class="footer-sep">•</span>
+      <a href="https://www.instagram.com/itsmeshubh1008" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram" aria-hidden="true"></i> Instagram</a>
+      <span class="footer-sep">•</span>
+      <a href="mailto:shubhamraj1414@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i> Email</a>
+      <span class="footer-sep">•</span>
+      <a href="#get-in-touch"><i class="fas fa-comment-dots" aria-hidden="true"></i> Contact</a>
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 900, once: true });
+  </script>
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
