@@ -231,8 +231,6 @@ export const PROFILE_DATA = {
     email: "mailto:shubhamraj1414@gmail.com",
     linkedinTag: "in/shubham-raj-sharma",
     emailRaw: "shubhamraj1414@gmail.com",
-    phoneRaw: "+91-6369039152",
-    phoneHref: "tel:+916369039152",
     location: "Noida, India",
     githubTag: "shubh100802"
   },

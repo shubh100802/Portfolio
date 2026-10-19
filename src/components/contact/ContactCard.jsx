@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import {
   Mail,
-  Phone,
   MapPin,
   Github,
   Linkedin,
@@ -18,7 +17,6 @@ import { PROFILE_DATA } from '../../data/profile';
 export const ContactCard = () => {
   const socials = PROFILE_DATA.socials || {};
   const [copiedEmail, setCopiedEmail] = useState(false);
-  const [copiedPhone, setCopiedPhone] = useState(false);
 
   // Email Composer state
   const [senderName, setSenderName] = useState('');
@@ -30,9 +28,6 @@ export const ContactCard = () => {
     if (type === 'email') {
       setCopiedEmail(true);
       setTimeout(() => setCopiedEmail(false), 2000);
-    } else if (type === 'phone') {
-      setCopiedPhone(true);
-      setTimeout(() => setCopiedPhone(false), 2000);
     }
   };
 
@@ -120,26 +115,32 @@ export const ContactCard = () => {
           </button>
         </div>
 
-        {/* Phone Channel */}
+        {/* LinkedIn Profile Channel */}
         <div className="contact-channel-item">
           <div className="channel-icon-box">
-            <Phone size={16} className="channel-icon violet" />
+            <Linkedin size={16} className="channel-icon violet" />
           </div>
           <div className="channel-info">
-            <span className="channel-label">PHONE NUMBER</span>
-            <a href={socials.phoneHref || "tel:+916369039152"} className="channel-val">
-              {socials.phoneRaw || "+91-6369039152"}
+            <span className="channel-label">LINKEDIN</span>
+            <a
+              href={socials.linkedin || "https://www.linkedin.com/in/shubham-raj-sharma/"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="channel-val"
+            >
+              {socials.linkedinTag || "in/shubham-raj-sharma"}
             </a>
           </div>
-          <button
-            type="button"
+          <a
+            href={socials.linkedin || "https://www.linkedin.com/in/shubham-raj-sharma/"}
+            target="_blank"
+            rel="noopener noreferrer"
             className="channel-copy-btn"
-            onClick={() => handleCopy(socials.phoneRaw || "+91-6369039152", 'phone')}
-            aria-label="Copy phone number"
-            title="Copy phone to clipboard"
+            aria-label="Open LinkedIn profile"
+            title="Open LinkedIn"
           >
-            {copiedPhone ? <Check size={14} style={{ color: 'var(--accent-cyan)' }} /> : <Copy size={14} />}
-          </button>
+            <ExternalLink size={14} />
+          </a>
         </div>
 
         {/* Location Channel */}
