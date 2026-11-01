@@ -71,8 +71,8 @@ export const CHARACTER_CONFIG = {
       section: "SKILLS",
       title: "Interacting with Tech Universe",
       description: "Directing attention to floating technology glyphs and technical systems.",
-      mp4: "/character/skills_interact.mp4",
-      poster: "/character/skills_interact.png",
+      mp4: "/character/Skill.mp4",
+      poster: "",
       alt: "Shubham Raj Sharma - Interacting with Tech Universe",
       glowColor: "rgba(124, 58, 237, 0.35)"
     },
@@ -82,8 +82,8 @@ export const CHARACTER_CONFIG = {
       section: "AI / ACHIEVEMENTS",
       title: "Building with Intelligence",
       description: "Interacting with AI pipelines, agentic workflows, and reasoning systems.",
-      mp4: "/character/ai_interact.mp4",
-      poster: "/character/ai_interact.png",
+      mp4: "/character/Ai+achi.mp4",
+      poster: "",
       alt: "Shubham Raj Sharma - Building with Intelligence",
       glowColor: "rgba(192, 132, 252, 0.4)"
     },

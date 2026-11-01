@@ -1,7 +1,6 @@
 services:
-  - type: web
+  - type: static
     name: shubham-portfolio
-    env: static
     buildCommand: npm run build
     staticPublishPath: ./dist
     routes:
