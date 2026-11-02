@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUp, Github, Linkedin, Mail, Heart } from 'lucide-react';
+import { ArrowUp, Github, Linkedin, Mail, Heart, Instagram } from 'lucide-react';
 import { PROFILE_DATA } from '../../data/profile';
 
 export const ContactFooter = () => {
@@ -51,6 +51,17 @@ export const ContactFooter = () => {
             >
               <Linkedin size={14} />
               <span>LINKEDIN</span>
+            </a>
+
+            <a
+              href={socials.instagram || "https://www.instagram.com/itsmeshubh1008?xtok=dzZ5cmgyNzhkanRp"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-nav-link"
+              aria-label="Instagram Profile"
+            >
+              <Instagram size={14} />
+              <span>INSTAGRAM</span>
             </a>
 
             <a

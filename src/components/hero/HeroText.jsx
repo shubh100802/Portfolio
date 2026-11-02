@@ -13,7 +13,7 @@ export const HeroText = ({ onSpeakingChange, onLineChange }) => {
             <Code2 size={13} className="eyebrow-icon" />
             <span>SOFTWARE ENGINEER</span>
           </span>
-          <span className="hero-eyebrow-tag">PORTFOLIO '26</span>
+          {/* <span className="hero-eyebrow-tag">PORTFOLIO '26</span> */}
         </div>
 
         <h1 className="hero-name">

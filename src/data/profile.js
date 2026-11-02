@@ -228,8 +228,10 @@ export const PROFILE_DATA = {
   socials: {
     github: "https://github.com/shubh100802",
     linkedin: "https://www.linkedin.com/in/shubham-raj-sharma/",
+    instagram: "https://www.instagram.com/itsmeshubh1008?xtok=dzZ5cmgyNzhkanRp",
     email: "mailto:shubhamraj1414@gmail.com",
     linkedinTag: "in/shubham-raj-sharma",
+    instagramTag: "@itsmeshubh1008",
     emailRaw: "shubhamraj1414@gmail.com",
     location: "Noida, India",
     githubTag: "shubh100802"

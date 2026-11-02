@@ -10,7 +10,10 @@ import {
   Check,
   ExternalLink,
   ArrowUpRight,
-  Sparkles
+  Sparkles,
+  Loader2,
+  AlertCircle,
+  Instagram
 } from 'lucide-react';
 import { PROFILE_DATA } from '../../data/profile';
 
@@ -20,8 +23,11 @@ export const ContactCard = () => {
 
   // Email Composer state
   const [senderName, setSenderName] = useState('');
+  const [senderEmail, setSenderEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
+  const [status, setStatus] = useState('idle'); // 'idle' | 'loading' | 'success' | 'error'
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleCopy = (text, type) => {
     navigator.clipboard.writeText(text);
@@ -31,13 +37,73 @@ export const ContactCard = () => {
     }
   };
 
-  const handleComposerSubmit = (e) => {
+  const escapeHtml = (text) => {
+    return String(text || '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  };
+
+  const handleComposerSubmit = async (e) => {
     e.preventDefault();
-    const mailtoSubject = encodeURIComponent(subject || `Project Inquiry from ${senderName || 'Portfolio Visitor'}`);
-    const mailtoBody = encodeURIComponent(
-      `Hi Shubham,\n\n${message}\n\nBest regards,\n${senderName || 'Sender'}`
-    );
-    window.location.href = `mailto:${socials.emailRaw || 'shubhamraj1414@gmail.com'}?subject=${mailtoSubject}&body=${mailtoBody}`;
+    if (!senderEmail || !message) return;
+
+    setStatus('loading');
+    setErrorMessage('');
+
+    const botToken = import.meta.env.VITE_TELEGRAM_BOT_TOKEN;
+    const chatId = import.meta.env.VITE_TELEGRAM_CHAT_ID;
+
+    if (!botToken || !chatId) {
+      setStatus('error');
+      setErrorMessage('Transmission dispatch configuration unavailable. Please contact via direct email or social channels.');
+      return;
+    }
+
+    const telegramText =
+      `⚡ <b>New Portfolio Message / Query</b>
+
+👤 <b>Sender:</b> ${escapeHtml(senderName || 'Anonymous')}
+📧 <b>Email:</b> ${escapeHtml(senderEmail)}
+📌 <b>Subject:</b> ${escapeHtml(subject || 'General Inquiry')}
+
+💬 <b>Message:</b>
+${escapeHtml(message)}
+
+⏰ <i>${new Date().toLocaleString()}</i>`;
+
+    try {
+      const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          chat_id: chatId,
+          text: telegramText,
+          parse_mode: 'HTML'
+        })
+      });
+
+      const data = await response.json();
+      if (data.ok) {
+        setStatus('success');
+        setSenderName('');
+        setSenderEmail('');
+        setSubject('');
+        setMessage('');
+        setTimeout(() => {
+          setStatus('idle');
+        }, 6000);
+      } else {
+        throw new Error(data.description || 'Transmission failed');
+      }
+    } catch (err) {
+      console.error('Telegram dispatch error:', err);
+      setStatus('error');
+      setErrorMessage('Direct dispatch failed. Please use direct email above.');
+    }
   };
 
   return (
@@ -75,6 +141,18 @@ export const ContactCard = () => {
         >
           <Linkedin size={16} />
           <span>CONNECT ON LINKEDIN</span>
+          <ExternalLink size={13} className="btn-arrow" />
+        </a>
+
+        <a
+          href={socials.instagram || "https://www.instagram.com/itsmeshubh1008?xtok=dzZ5cmgyNzhkanRp"}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="contact-primary-btn contact-instagram-btn"
+          aria-label="Follow Shubham on Instagram (opens in new tab)"
+        >
+          <Instagram size={16} />
+          <span>INSTAGRAM</span>
           <ExternalLink size={13} className="btn-arrow" />
         </a>
 
@@ -153,6 +231,34 @@ export const ContactCard = () => {
             <span className="channel-val">{socials.location || "Noida, India"}</span>
           </div>
         </div>
+
+        {/* Instagram Profile Channel */}
+        <div className="contact-channel-item">
+          <div className="channel-icon-box">
+            <Instagram size={16} className="channel-icon pink" />
+          </div>
+          <div className="channel-info">
+            <span className="channel-label">INSTAGRAM</span>
+            <a
+              href={socials.instagram || "https://www.instagram.com/itsmeshubh1008?xtok=dzZ5cmgyNzhkanRp"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="channel-val"
+            >
+              {socials.instagramTag || "@itsmeshubh1008"}
+            </a>
+          </div>
+          <a
+            href={socials.instagram || "https://www.instagram.com/itsmeshubh1008?xtok=dzZ5cmgyNzhkanRp"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="channel-copy-btn"
+            aria-label="Open Instagram profile"
+            title="Open Instagram"
+          >
+            <ExternalLink size={14} />
+          </a>
+        </div>
       </div>
 
       {/* Direct Client-Side Message Composer */}
@@ -162,7 +268,7 @@ export const ContactCard = () => {
             <Send size={13} style={{ color: 'var(--accent-cyan)' }} />
             <span className="composer-title">DIRECT MESSAGE COMPOSER</span>
           </div>
-          <span className="composer-tag">PRE-FILLS YOUR EMAIL CLIENT</span>
+          <span className="composer-tag">DIRECT INBOX</span>
         </div>
 
         <form onSubmit={handleComposerSubmit} className="contact-composer-form">
@@ -176,23 +282,39 @@ export const ContactCard = () => {
                 placeholder="e.g. Alex Rivera"
                 value={senderName}
                 onChange={(e) => setSenderName(e.target.value)}
+                disabled={status === 'loading'}
               />
             </div>
             <div className="form-group">
-              <label htmlFor="subject-line" className="form-label">SUBJECT</label>
+              <label htmlFor="sender-email" className="form-label">YOUR EMAIL *</label>
               <input
-                id="subject-line"
-                type="text"
+                id="sender-email"
+                type="email"
                 className="form-input"
-                placeholder="e.g. Engineering Opportunity / Collaboration"
-                value={subject}
-                onChange={(e) => setSubject(e.target.value)}
+                placeholder="e.g. alex@example.com"
+                value={senderEmail}
+                onChange={(e) => setSenderEmail(e.target.value)}
+                required
+                disabled={status === 'loading'}
               />
             </div>
           </div>
 
           <div className="form-group">
-            <label htmlFor="message-body" className="form-label">MESSAGE</label>
+            <label htmlFor="subject-line" className="form-label">SUBJECT</label>
+            <input
+              id="subject-line"
+              type="text"
+              className="form-input"
+              placeholder="e.g. Engineering Opportunity / Collaboration"
+              value={subject}
+              onChange={(e) => setSubject(e.target.value)}
+              disabled={status === 'loading'}
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="message-body" className="form-label">MESSAGE *</label>
             <textarea
               id="message-body"
               rows={4}
@@ -201,16 +323,49 @@ export const ContactCard = () => {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               required
+              disabled={status === 'loading'}
             />
           </div>
 
+          {status === 'success' && (
+            <div className="composer-status-banner success" role="alert">
+              <Check size={16} />
+              <span>Query transmitted successfully! I will reach out to your email shortly.</span>
+            </div>
+          )}
+
+          {status === 'error' && (
+            <div className="composer-status-banner error" role="alert">
+              <AlertCircle size={16} />
+              <span>{errorMessage}</span>
+            </div>
+          )}
+
           <div className="composer-actions">
-            <button type="submit" className="composer-submit-btn">
-              <Send size={14} />
-              <span>LAUNCH EMAIL CLIENT</span>
+            <button
+              type="submit"
+              className="composer-submit-btn"
+              disabled={status === 'loading'}
+            >
+              {status === 'loading' ? (
+                <>
+                  <Loader2 size={14} className="spin-icon" />
+                  <span>SUBMITTING...</span>
+                </>
+              ) : status === 'success' ? (
+                <>
+                  <Check size={14} />
+                  <span>QUERY SUBMITTED</span>
+                </>
+              ) : (
+                <>
+                  <Send size={14} />
+                  <span>SUBMIT QUERY</span>
+                </>
+              )}
             </button>
             <span className="composer-hint">
-              Opens directly in your default email client with your pre-filled message.
+              Typically responds within 24 hours.
             </span>
           </div>
         </form>

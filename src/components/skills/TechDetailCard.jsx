@@ -12,7 +12,7 @@ export const TechDetailCard = ({ node, allNodes = [], onSelectNode }) => {
         <div className="tech-detail-title-group">
           <div className="tech-detail-badge-group">
             <span className="tech-detail-cat-pill">{node.categoryLabel}</span>
-            <span className="tech-detail-node-id">SYSTEM://{node.id.toUpperCase()}</span>
+            <span className="tech-detail-node-id">SYSTEM • {node.id.toUpperCase()}</span>
           </div>
           <h3 className="tech-detail-name">{node.name}</h3>
           <p className="tech-detail-tagline">{node.tagline}</p>

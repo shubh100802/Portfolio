@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { PROFILE_DATA } from '../../data/profile';
-import { Menu, X, ChevronRight, FileText, Github, Linkedin, Mail, Sparkles, ArrowUpRight } from 'lucide-react';
+import { Menu, X, ChevronRight, FileText, Github, Linkedin, Mail, Sparkles, ArrowUpRight, Instagram } from 'lucide-react';
 
 const chapterDetails = {
   '#about': { index: '01', sub: 'Engineering Identity & Core Pillars' },
@@ -166,7 +166,6 @@ export const HeroNavigation = () => {
               <span className="mobile-pulse-dot" aria-hidden="true" />
               <div className="mobile-telemetry-text">
                 <span className="telemetry-label">NAVIGATIONAL MATRIX</span>
-                <span className="telemetry-status">ONLINE // 07 CHAPTERS</span>
               </div>
             </div>
 
@@ -244,6 +243,17 @@ export const HeroNavigation = () => {
               >
                 <Linkedin size={14} />
                 <span>LINKEDIN</span>
+              </a>
+
+              <a
+                href={PROFILE_DATA.socials.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mobile-social-pill"
+                aria-label="Instagram Profile"
+              >
+                <Instagram size={14} />
+                <span>INSTAGRAM</span>
               </a>
 
               <a

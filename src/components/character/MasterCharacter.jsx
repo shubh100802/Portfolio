@@ -24,8 +24,14 @@ export const MasterCharacter = ({
   useEffect(() => {
     const el = containerRef.current;
     const video = videoRef.current;
+
     if (video && hasVideo) {
-      video.play().catch(() => {});
+      if (video.readyState >= 2) {
+        setIsVideoLoaded(true);
+      }
+      video.play().then(() => {
+        setIsVideoLoaded(true);
+      }).catch(() => {});
     }
 
     if (!el || !hasVideo) return;
@@ -35,14 +41,16 @@ export const MasterCharacter = ({
         entries.forEach((entry) => {
           if (videoRef.current) {
             if (entry.isIntersecting) {
-              videoRef.current.play().catch(() => {});
+              videoRef.current.play().then(() => {
+                setIsVideoLoaded(true);
+              }).catch(() => {});
             } else {
               videoRef.current.pause();
             }
           }
         });
       },
-      { threshold: 0.15 }
+      { threshold: 0.1 }
     );
 
     observer.observe(el);
@@ -96,17 +104,27 @@ export const MasterCharacter = ({
           <video
             ref={videoRef}
             key={config.mp4 || config.webm}
-            src={config.mp4 || config.webm}
             className="master-character-video"
             playsInline
             autoPlay
             loop
             muted
             preload="auto"
-            poster={config.poster}
+            poster={config.poster || undefined}
+            onLoadedMetadata={() => setIsVideoLoaded(true)}
             onLoadedData={() => setIsVideoLoaded(true)}
             onCanPlay={() => setIsVideoLoaded(true)}
-            onError={() => setVideoError(true)}
+            onPlay={() => setIsVideoLoaded(true)}
+            onTimeUpdate={() => {
+              if (!isVideoLoaded) setIsVideoLoaded(true);
+            }}
+            onError={(e) => {
+              const err = e.currentTarget?.error;
+              if (err && err.code !== 0) {
+                console.warn(`Video load error for ${config.id}:`, err);
+                setVideoError(true);
+              }
+            }}
           >
             {config.webm && <source src={config.webm} type='video/webm; codecs="vp9, vorbis"' />}
             {config.webm && <source src={config.webm} type="video/webm" />}

@@ -28,7 +28,7 @@ export const CHARACTER_CONFIG = {
       title: "Confident Introduction",
       description: "Welcoming introduction with friendly expression and posture.",
       mp4: "/character/hero_idle_animation.mp4",
-      poster: "/character/hero_idle.png",
+      poster: "",
       alt: "Shubham Raj Sharma - Software Development Engineer",
       glowColor: "rgba(0, 229, 255, 0.25)"
     },
@@ -39,7 +39,7 @@ export const CHARACTER_CONFIG = {
       title: "Explaining / Talking",
       description: "Articulating engineering focus and identity with expressive gestures.",
       mp4: "/character/About_idle.mp4",
-      poster: "/character/About_idle.png",
+      poster: "",
       alt: "Shubham Raj Sharma - Explaining & Presenting",
       glowColor: "rgba(124, 58, 237, 0.35)"
     },
@@ -50,7 +50,7 @@ export const CHARACTER_CONFIG = {
       title: "Engineering in Practice",
       description: "Presenting real-world full-stack development and backend engineering track record.",
       mp4: "/character/Exp_idle.mp4",
-      poster: "/character/Exp_idle.png",
+      poster: "",
       alt: "Shubham Raj Sharma - Professional Experience",
       glowColor: "rgba(56, 189, 248, 0.3)"
     },
@@ -61,7 +61,7 @@ export const CHARACTER_CONFIG = {
       title: "Interacting with UI",
       description: "Developing code and building modern full-stack architectures.",
       mp4: "/character/Projects_idle.mp4",
-      poster: "/character/Projects_idle.png",
+      poster: "",
       alt: "Shubham Raj Sharma - Working on Projects",
       glowColor: "rgba(0, 229, 255, 0.3)"
     },

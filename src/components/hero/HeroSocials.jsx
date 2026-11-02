@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail, Instagram } from 'lucide-react';
 import { PROFILE_DATA } from '../../data/profile';
 
 export const HeroSocials = () => {
@@ -21,6 +21,15 @@ export const HeroSocials = () => {
       brandColor: '#0a66c2',
       brandGlow: 'rgba(10, 102, 194, 0.5)',
       brandBg: 'rgba(10, 102, 194, 0.12)'
+    },
+    {
+      name: 'Instagram',
+      href: PROFILE_DATA.socials.instagram,
+      icon: <Instagram size={18} />,
+      label: 'instagram.com/itsmeshubh1008',
+      brandColor: '#E1306C',
+      brandGlow: 'rgba(225, 48, 108, 0.5)',
+      brandBg: 'rgba(225, 48, 108, 0.12)'
     },
     {
       name: 'Email',

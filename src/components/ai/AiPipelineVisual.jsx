@@ -42,7 +42,7 @@ export const AiPipelineVisual = () => {
           <span className="telemetry-live-dot ai-live-dot" />
           <span className="telemetry-label ai-telemetry-label">NEURAL PIPELINE TOPOLOGY</span>
         </div>
-        <span className="ai-mono-tag">DETERMINISTIC // AGENTIC</span>
+        <span className="ai-mono-tag">DETERMINISTIC • AGENTIC</span>
       </div>
 
       <div className="ai-pipeline-canvas">

@@ -64,7 +64,6 @@ export const Contact = ({
         {/* Final CTA Banner */}
         <div className="contact-final-cta-banner ui-interactive">
           <div className="final-cta-content">
-            {/* <span className="final-cta-eyebrow">FINAL CHAPTER // HORIZON</span> */}
             <h3 className="final-cta-title">LET'S BUILD WHAT'S NEXT.</h3>
             <p className="final-cta-desc">
               Whether you're scaling a backend system, exploring AI agent workflows, or building something entirely new — I'm ready to contribute.
