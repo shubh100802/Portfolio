@@ -93,8 +93,8 @@ export const CHARACTER_CONFIG = {
       section: "CONTACT",
       title: "Welcoming to Connect",
       description: "Warm final interaction inviting collaborations and engineering opportunities.",
-      mp4: "/character/contact_welcome.mp4",
-      poster: "/character/contact_welcome.png",
+      mp4: "/character/Contact_idle.mp4",
+      poster: "",
       alt: "Shubham Raj Sharma - Welcoming to Connect",
       glowColor: "rgba(0, 229, 255, 0.35)"
     }
